@@ -1,0 +1,77 @@
+
+
+
+Nathan Reichert
+
+Saint Cloud State University
+
+CSCI 301
+
+Project 8
+
+Queueing Simulation
+
+Due:  9 November, 2015
+
+
+
+
+Nathan Reichert
+cs301106
+Section 1
+Project 8-Queueing Simulation
+Due 9 November, 2015
+
+Design Document
+
+Intro:
+      To begin, the problem proposed was to develop code that will simulate a system of queues. This type of simulation emulates a situation involving a number of line and server relationships dictated by pseudo-random numbers, and situational parameters.
+Data Structures:
+	This project uses an array of link based implementations of a Queue ADT to keep track of simulated customers waiting in the lines, and an array of integers to keep track of the servers associated with each line.
+Functions:
+	There are seven functions defined for the Queue ADT itself: the default constructor initialized an empty queue, the default constructor returns memory back to the system when a queue is no longer being used, the enqueue function adds an item to the rear of the queue, the dequeue function removes an item from the front of the queue, the isEmpty function returns whether or not a queue is empty, the size function returns the number of items in a queue, and a friend function overloads the ‘<<’ operator.
+Main Program:
+	The main program requests parameters for a queueing simulation in the forms of an integer for the number of lines and servers, an integer percent for the probability of a customer arriving, an integer for the maximum number of ticks of time units a transaction can possibly take, an integer for the duration of the simulation in time units of ticks, and an integer seed for the pseudo random number generations. The program will output a ‘snapshot’ of the simulation at each time unit tick, as well as a summary of statistics at the very end of the duration of the simulation.
+
+
+
+
+Nathan Reichert
+cs301106
+Section 1
+Project 8-Queueing Simulation
+Due 9 November, 2015
+
+User Document
+
+	The main program gives instructions to the user to input parameters for the queueing simulation that it will run, and in turn, will output the behavior of the simulation at each time unit tick, allowing the user to see a summary of all of the events that occurred during the simulation, and a summary of statistics can be reviewed following the entire simulation.
+
+The main program has been written to include all of the necessary files in the compilation of the main program.
+
+All necessary and relevant files are located at:
+	/export/home/cs301/cs301106/Projects/project8
+
+To compile the main program in the CSCI2 unix terminal, enter:  g++ qSimulation.cpp
+To run the program, after compiling, in the unix terminal, enter: a.out
+
+
+
+
+
+
+
+
+
+
+Nathan Reichert
+cs301106
+Section 1
+Project 8-Queueing Simulation
+Due 9 November, 2015
+
+	In summation, this project shows a very useful implication for pseudo random number generation in simulating real-world situations. This type of program would be quite useful to any company interested in minimizing or maximizing aspects of their point-of-service operations, such as minimizing customer wait time, minimizing the number of necessary point-of-service personnel, and maximizing flow of large customer ingress taking the previous two points into consideration as well. This type of simulation has countless other implications as well, such as being modified to simulate traffic flow at intersections, and perhaps even air traffic control situations.
+
+	One thing that I learned from this project was how to use an array of class objects in a main program. I have not had much practice manipulating data in this way, and this project forced me to become quite familiar with the idea. I feel that it is a sort of fundamental skill that has always evaded me, but had become very clear to me during the undertaking of this program.
+
+	A question proposed for this project: If the probability that a customer arrives during one tick is 75%, and the maximum transaction time is eight ticks, what is the smallest number of lines and tellers the system can have and usually keep the average time customers wait below ten ticks? The solution that myself and my program had come up with is a system that has 4 lines and servers. Most of the simulations conducted with 5 lines and servers yielded very small wait times, with almost no lines for the servers in many cases. Most of the simulations conducted with 3 lines and servers built up larger and larger lines over time, and had average wait times near 20 ticks. The simulation with 4 lines and servers yielded average wait times mostly below 10 ticks, and some at 11 ticks, therefore this is the solution that best fits the criteria sought after in the question.
+
