@@ -1,6 +1,6 @@
-// Author: Nathan Reichert
-// Date Last Modified: Thursday January 17, 2019
-// The purpose of this program is to utilize a Queue class in a general representation simulating checkout lanes of a retail store
+// \author Nathan Reichert
+// \date Last Modified: Thursday January 17, 2019
+// \brief The purpose of this program is to utilize a Queue class in a general representation simulating checkout lanes of a retail store
 
 #include "Queue.h"
 #include "Queue.cpp"
@@ -9,9 +9,8 @@
 #include <iomanip>
 using namespace std;
 
-int shortest(int num, int serve[], Queue q[]);   //Prototype for function returning index of shortest line
-int totalLeft(int num, Queue q[]); //Prototype for function returning total customers still
-                                   //waiting in all lines
+int shortest(int num, int serve[], Queue q[]);   ///<Prototype for function returning index of shortest line
+int totalLeft(int num, Queue q[]); ///<Prototype for function returning total customers still waiting in all lines
 
 int main()
 {
@@ -76,7 +75,9 @@ int main()
 	cout << "Customers remaining in line at simulation end: " << totalLeft(lineServeNum, line) << endl;
 }
 
-int shortest(int num, int serve[], Queue q[])              // Function that returns the index associated with the server with the shortest line
+// \pre Takes in an int, int array, and array of Queues
+// \post Function that returns the index associated with the server with the shortest line
+int shortest(int num, int serve[], Queue q[])
 {
 	if (num == 1)                                          // if only one line/server pair
 		return 0;					                       // returns first index
@@ -93,7 +94,9 @@ int shortest(int num, int serve[], Queue q[])              // Function that retu
 	return index;										   // Returns the index associated with the server with the smallest line
 }
 
-int totalLeft(int num, Queue q[])                          // Function that returns the number of customers still in line at the end of the simulation
+// \pre Takes in an int and an array of queues
+// \post Function that returns the number of customers still in line at the end of the simulation
+int totalLeft(int num, Queue q[])
 {
 	int customers = 0;                                     // Initialize variable for counting customers to zero
 	for (int i=0; i<num; ++i)                              // For each index associated with a server's queue

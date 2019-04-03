@@ -1,5 +1,5 @@
-//Author: Nathan Reichert
-//Last Modified: Wednesday January 23, 2019
+// \author: Nathan Reichert
+// \date Last Modified: Wednesday January 23, 2019
 
 #include <cstdlib>
 #include <iostream>
@@ -7,9 +7,9 @@
 #include "Queue.h"                                           //Header file 
 using namespace std;
 
-                                                             //Default constructor is inline.
+                                                             // Default constructor is inline.
 
-Queue::~Queue( )                                             //Implementation of Deconstructor
+Queue::~Queue( )                                             ///<Implementation of Deconstructor
 {
 	Node* temp;                                              //Temporary node pointer
 
@@ -21,7 +21,9 @@ Queue::~Queue( )                                             //Implementation of
     }
 }
 
-void Queue::enqueue ( Item entry )                           //Implementation of Function to enqueue an item
+// \pre Takes in item of typedef Item
+// \post Enqueues item into Queue object
+void Queue::enqueue ( Item entry )                           ///<Implementation of Function to enqueue an item
 {
 	if ( isEmpty() )                                         //If the queue contains no items
 	{
@@ -36,7 +38,9 @@ void Queue::enqueue ( Item entry )                           //Implementation of
     }
 }
 
-Queue::Item Queue::dequeue()                                 //Implementation of Function to dequeue an item
+// \pre Queue object
+// \post removes item from front of Queue object
+Queue::Item Queue::dequeue()                                 ///<Implementation of Function to dequeue an item
 {
 	Node* temp;                                              //Initialize a temporary node pointer
 	Item dequeued;                                           //Initialize item that is to be dequeued
@@ -50,7 +54,10 @@ Queue::Item Queue::dequeue()                                 //Implementation of
 	return dequeued;                                         //Return the data from the node that was dequeued & deleted
 }
 
-ostream& operator << ( ostream& outStr, const Queue& q )     //Operator overloading '<<' to append q queue contents to outStr ostream
+
+// \pre Queue object
+// \post cout contents of Queue object
+ostream& operator << ( ostream& outStr, const Queue& q )     ///<Operator overloading '<<' to append q queue contents to outStr ostream
 {
     Queue::Node *cursor;                                     //Initialize a temporary pointer to a node
 
@@ -64,7 +71,9 @@ ostream& operator << ( ostream& outStr, const Queue& q )     //Operator overload
     return outStr;                                           //Returns entire ostream generated
 }
 
-Queue::Node* Queue::getNode ( Item entry, Node* next )       //Implementation of function that returns a pointer to a newly created node
+// \pre Queue object
+// \post returns pointer to a new node in Queue object
+Queue::Node* Queue::getNode ( Item entry, Node* next )       ///<Implementation of function that returns a pointer to a newly created node
 {
     Node *temp;                                              //Initializes temp pointer to a node
 
