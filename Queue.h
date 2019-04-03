@@ -1,6 +1,6 @@
-// \author: Nathan Reichert
-// \date Last Updated: Tuesday January 22, 2019
-// \brief This is the header file for a queue data structure adapted from Dr. Bryant Julstrom's class notes for CSCI301
+//\author: Nathan Reichert
+//\date Last Updated: Tuesday January 22, 2019
+//\brief This is the header file for a queue data structure adapted from Dr. Bryant Julstrom's class notes for CSCI301
 
 #ifndef QUEUE_H
 #define QUEUE_H

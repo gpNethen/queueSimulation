@@ -1,6 +1,6 @@
-// \author: Nathan Reichert
-// \date Last Modified: Wednesday January 23, 2019
-// \brief Implementation file for the Queue abstract data type object
+//\author: Nathan Reichert
+//\date Last Modified: Wednesday January 23, 2019
+//\brief Implementation file for the Queue abstract data type object
 
 #include <cstdlib>
 #include <iostream>

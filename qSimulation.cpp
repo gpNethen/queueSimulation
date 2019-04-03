@@ -1,6 +1,6 @@
-// \author Nathan Reichert
-// \date Last Modified: Thursday January 17, 2019
-// \brief The purpose of this program is to utilize a Queue class in a general representation simulating checkout lanes of a retail store
+//\author Nathan Reichert
+//\date Last Modified: Thursday January 17, 2019
+//\brief The purpose of this program is to utilize a Queue class in a general representation simulating checkout lanes of a retail store
 
 #include "Queue.h"
 #include "Queue.cpp"
